@@ -19,7 +19,7 @@ public class Main {
         System.out.println(cuentas);
 
         IBuscar cliente = new BuscarImp();
-        List<Cuenta> cuenta = cliente.buscarCuenta(cuentas, 2, "abcd");
+        List<Cuenta> cuenta = cliente.buscarCuenta(cuentas, 2, "abcd111");
         System.out.println("*********** BUSQUEDA DE UN CLIENTE X : *************");
         System.out.println(cuenta);
 
