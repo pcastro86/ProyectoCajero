@@ -3,6 +3,7 @@ package interfaces.implementaciones;
 import interfaces.IPoblar;
 import modelos.Cuenta;
 import modelos.Usuario;
+import modelos.enums.TipoCuenta;
 import sun.awt.AWTAccessor;
 
 import java.util.ArrayList;
@@ -15,10 +16,13 @@ public class PoblarImp implements IPoblar {
 
 
 
-        Cuenta c1 = new Cuenta(1, 1000, "caja de ahorro", "abcd", new Usuario("Pilar", "pili", "Castro"));
-        Cuenta c2 = new Cuenta(2, 2000, "caja de ahorro", "abcd111", new Usuario("Juan", "juancho", "Perez"));
+        Cuenta c1 = new Cuenta(1, 1000,  TipoCuenta.AHORROS, "abcd", new Usuario("Pilar", "pili", "Castro"));
+        Cuenta c2 = new Cuenta(2, 2000,  TipoCuenta.AHORROS, "abcd111", new Usuario("Juan", "juancho", "Perez"));
+        Cuenta c3 = new Cuenta(2, 2000,  TipoCuenta.AHORROS, "abcd111", new Usuario("Juan", "juancho", "Perez"));
+
         tablaDeCuentas.add(c1);
         tablaDeCuentas.add(c2);
+        tablaDeCuentas.add(c3);
 
         return tablaDeCuentas;
     }

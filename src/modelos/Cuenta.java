@@ -1,16 +1,18 @@
 package modelos;
 
+import modelos.enums.TipoCuenta;
+
 public class Cuenta {
     private int numCta;
     private int monto;
-    private String tipoCta;
+    private TipoCuenta tipocuenta; // enumerador es un tipo de clase que me ayuda a utilizar tipos de objetos. El enum es tipo cuenta y el nombre que le doy es tipocuenta
     private String clave;
     Usuario user;
 
-    public Cuenta(int numCta, int monto, String tipoCta, String clave, Usuario user) {
+    public Cuenta(int numCta, int monto, TipoCuenta tipocuenta, String clave, Usuario user) {
         this.numCta = numCta;
         this.monto = monto;
-        this.tipoCta = tipoCta;
+        this.tipocuenta = tipocuenta;
         this.clave = clave;
         this.user = user;
     }
@@ -23,7 +25,6 @@ public class Cuenta {
         this.numCta = numCta;
     }
 
-
     public int getMonto() {
         return monto;
     }
@@ -32,12 +33,12 @@ public class Cuenta {
         this.monto = monto;
     }
 
-    public String getTipoCta() {
-        return tipoCta;
+    public TipoCuenta getTipocuenta() {
+        return tipocuenta;
     }
 
-    public void setTipoCta(String tipoCta) {
-        this.tipoCta = tipoCta;
+    public void setTipocuenta(TipoCuenta tipocuenta) {
+        this.tipocuenta = tipocuenta;
     }
 
     public String getClave() {
@@ -61,9 +62,11 @@ public class Cuenta {
         return "Cuenta{" +
                 "numCta=" + numCta +
                 ", monto=" + monto +
-                ", tipoCta='" + tipoCta + '\'' +
+                ", tipocuenta=" + tipocuenta.name() +
                 ", clave='" + clave + '\'' +
                 ", user=" + user +
                 '}';
     }
 }
+
+

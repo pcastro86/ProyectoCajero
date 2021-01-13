@@ -14,8 +14,6 @@ public class BuscarImp implements IBuscar {
         for (Cuenta i: cuentas) {
             if(i.getNumCta() == numCta && i.getClave() == clave) { // agregar && else return leyenda
                 cliente.add(i);
-            } else {
-                return  System.out.println( "no hay coincidencias");
             }
         }
         return cliente;
